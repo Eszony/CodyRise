@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodyRise - Soluções Web Modernas</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="assets/style/style.css">
+</head>
+<body class="font-sans">
+    <!-- Navbar -->
+    <nav class="navbar fixed top-0 left-0 right-0 z-50 bg-white bg-opacity-80 backdrop-blur py-4">
+      <div class="flex items-center justify-between w-full max-w-screen-xl mx-auto px-6 md:px-12">
+        <!-- Logo -->
+        <a href="#" class="flex-shrink-0">
+          <img
+            src="assets/images/CodyRise.png"
+            alt="CodyRise Logo"
+            class="h-10 w-auto"
+          />
+        </a>
+    
+        <!-- Menu desktop -->
+        <div class="hidden md:flex space-x-8">
+          <a href="#inicio" class="font-medium hover:text-secondary transition-colors">Início</a>
+          <a href="#servicos" class="font-medium hover:text-secondary transition-colors">Serviços</a>
+          <a href="#sobre" class="font-medium hover:text-secondary transition-colors">Sobre</a>
+          <a href="#portfolio" class="font-medium hover:text-secondary transition-colors">Portfólio</a>
+          <a href="#contato" class="font-medium hover:text-secondary transition-colors">Contato</a>
+        </div>
+    
+        <!-- Botão mobile -->
+        <button id="menu-toggle" class="md:hidden focus:outline-none">
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
+      </div>
+    
+      <!-- Menu mobile -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden absolute top-full left-0 right-0 bg-white shadow-lg p-6 rounded-b-xl"
+      >
+        <div class="flex flex-col space-y-4">
+          <a href="#inicio" class="font-medium hover:text-secondary transition-colors">Início</a>
+          <a href="#servicos" class="font-medium hover:text-secondary transition-colors">Serviços</a>
+          <a href="#sobre" class="font-medium hover:text-secondary transition-colors">Sobre</a>
+          <a href="#portfolio" class="font-medium hover:text-secondary transition-colors">Portfólio</a>
+          <a href="#contato" class="font-medium hover:text-secondary transition-colors">Contato</a>
+        </div>
+      </div>
+    </nav>
+    
+    
+    
+
+    <!-- Hero Section -->
+    <section id="inicio" class="relative pt-24 pb-16 bg-gradient overflow-hidden">
+        <div class="container mx-auto px-6 md:px-12">
+            <div class="flex flex-col-reverse md:flex-row items-center justify-between">
+                <div class="md:w-1/2 text-white mt-10 md:mt-0" data-aos="fade-right">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">Transformando ideias em experiências digitais</h1>
+                    <p class="text-lg mb-8 opacity-90">Criamos websites modernos e responsivos que impulsionam o seu negócio para o próximo nível.</p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="#contato" class="btn-primary text-white font-medium px-8 py-3 rounded-full text-center shadow-lg">Fale Conosco</a>
+                        <a href="#servicos" class="bg-white text-green-600 border-2 border-green-600 font-medium px-8 py-3 rounded-full inline-block shadow-lg hover:bg-green-600 hover:text-white transition-colors duration-200">Nossos Serviços</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center" data-aos="fade-left">
+                    <div class="relative w-full max-w-lg">
+                        <!-- Substituímos a imagem quebrada com uma SVG inline que representa desenvolvimento web -->
+                        <svg viewBox="0 0 600 400" class="w-full">
+                            <rect x="100" y="50" width="400" height="250" rx="10" fill="#fff" />
+                            <rect x="120" y="80" width="360" height="30" rx="5" fill="#00a651" opacity="0.2" />
+                            <rect x="120" y="130" width="120" height="150" rx="5" fill="#00b2a9" opacity="0.3" />
+                            <rect x="260" y="130" width="100" height="70" rx="5" fill="#00a651" opacity="0.3" />
+                            <rect x="260" y="210" width="100" height="70" rx="5" fill="#00b2a9" opacity="0.3" />
+                            <rect x="380" y="130" width="100" height="150" rx="5" fill="#00a651" opacity="0.3" />
+                            <circle cx="135" cy="95" r="5" fill="#00b2a9" />
+                            <circle cx="155" cy="95" r="5" fill="#00a651" />
+                            <circle cx="175" cy="95" r="5" fill="#fff" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Wave divider simplificado e mais suave -->
+        <div class="absolute bottom-0 left-0 w-full">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" preserveAspectRatio="none" class="w-full h-20">
+                <path fill="#ffffff" fill-opacity="1" d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicos" class="py-20">
+        <div class="container mx-auto px-6 md:px-12">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold mb-4">Nossos <span class="text-gradient">Serviços</span></h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Oferecemos soluções web completas para impulsionar sua presença digital e destacar seu negócio.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="service-card p-6 bg-white rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-gradient rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-laptop-code text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Desenvolvimento de Websites</h3>
+                    <p class="text-gray-600">Criamos sites personalizados, responsivos e otimizados que convertem visitantes em clientes.</p>
+                </div>
+                
+                <div class="service-card p-6 bg-white rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="200">
+                  <div class="w-16 h-16 bg-gradient rounded-lg flex items-center justify-center mb-6">
+                    <i class="fas fa-shopping-cart text-white text-2xl"></i>
+                  </div>
+                  <h3 class="text-xl font-bold mb-3 flex items-center">
+                    E-commerce
+                    <span class="ml-2 text-xs bg-gray-200 text-gray-600 px-2 py-0.5 rounded-full">Em breve</span>
+                  </h3>
+                  <p class="text-gray-600">
+                    Desenvolvemos lojas virtuais completas com gestão de produtos, pagamentos e logística integrados.
+                  </p>
+                </div>
+                
+                
+                <div class="service-card p-6 bg-white rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 bg-gradient rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-mobile-alt text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Design Responsivo</h3>
+                    <p class="text-gray-600">Garantimos que seu site funcione perfeitamente em todos os dispositivos, de desktops a smartphones.</p>
+                </div>
+                
+                <div class="service-card p-6 bg-white rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-16 h-16 bg-gradient rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-search text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">SEO</h3>
+                    <p class="text-gray-600">Otimizamos seu site para os mecanismos de busca, aumentando sua visibilidade online.</p>
+                </div>
+                
+                <div class="service-card p-6 bg-white rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="500">
+                    <div class="w-16 h-16 bg-gradient rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-pencil-alt text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Conteúdo Web</h3>
+                    <p class="text-gray-600">Criamos conteúdo estratégico que comunica sua mensagem e conecta com seu público.</p>
+                </div>
+                
+                <div class="service-card p-6 bg-white rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="600">
+                    <div class="w-16 h-16 bg-gradient rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-server text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Hospedagem & Manutenção</h3>
+                    <p class="text-gray-600">Oferecemos soluções completas de hospedagem e suporte técnico contínuo para seu site.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6 md:px-12">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right">
+                    <img src="assets/images/sobre nós.png" alt="About CodyRise" class="rounded-lg shadow-xl w-full">
+                </div>
+                <div class="md:w-1/2 md:pl-12" data-aos="fade-left">
+                    <h2 class="text-4xl font-bold mb-6">Sobre a <span class="text-gradient">CodyRise</span></h2>
+                    <p class="text-lg text-gray-600 mb-4">Somos uma empresa de tecnologia comprometida em criar experiências digitais excepcionais para negócios de todos os tamanhos.</p>
+                    <p class="text-lg text-gray-600 mb-6">Nossa equipe de desenvolvedores e designers talentosos trabalha com paixão para transformar suas ideias em realidade, utilizando as mais recentes tecnologias e tendências do mercado.</p>
+                    
+                    <div class="grid grid-cols-2 gap-4 mb-8">
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-secondary text-xl mr-2"></i>
+                            <span class="font-medium">Equipe Qualificada</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-secondary text-xl mr-2"></i>
+                            <span class="font-medium">Tecnologia Avançada</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-secondary text-xl mr-2"></i>
+                            <span class="font-medium">Projetos Personalizados</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-secondary text-xl mr-2"></i>
+                            <span class="font-medium">Suporte Contínuo</span>
+                        </div>
+                    </div>
+                    
+                    <a href="#contato" class="btn-primary text-white font-medium px-8 py-3 rounded-full inline-block shadow-lg">Conheça Nossa Equipe</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20">
+        <div class="container mx-auto px-6 md:px-12">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold mb-4">Nosso <span class="text-gradient">Portfólio</span></h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Confira alguns dos nossos projetos recentes e descubra como podemos transformar a sua presença digital.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="overflow-hidden rounded-xl shadow-lg" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="/api/placeholder/600/400" alt="Portfolio Item" class="w-full h-64 object-cover transition-transform duration-500 hover:scale-110">
+                    <div class="p-6 bg-white">
+                        <h3 class="text-xl font-bold mb-2">E-commerce de Moda</h3>
+                        <p class="text-gray-600 mb-4">Desenvolvimento de loja virtual completa com sistema de pagamento integrado.</p>
+                        <a href="#" class="font-medium text-secondary hover:underline">Ver projeto</a>
+                    </div>
+                </div>
+                
+                <div class="overflow-hidden rounded-xl shadow-lg" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="/api/placeholder/600/400" alt="Portfolio Item" class="w-full h-64 object-cover transition-transform duration-500 hover:scale-110">
+                    <div class="p-6 bg-white">
+                        <h3 class="text-xl font-bold mb-2">Site Institucional</h3>
+                        <p class="text-gray-600 mb-4">Website responsivo para empresa de serviços financeiros.</p>
+                        <a href="#" class="font-medium text-secondary hover:underline">Ver projeto</a>
+                    </div>
+                </div>
+                
+                <div class="overflow-hidden rounded-xl shadow-lg" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="/api/placeholder/600/400" alt="Portfolio Item" class="w-full h-64 object-cover transition-transform duration-500 hover:scale-110">
+                    <div class="p-6 bg-white">
+                        <h3 class="text-xl font-bold mb-2">Aplicação Web</h3>
+                        <p class="text-gray-600 mb-4">Sistema de gestão de reservas para restaurante gourmet.</p>
+                        <a href="#" class="font-medium text-secondary hover:underline">Ver projeto</a>
+                    </div>
+                </div>
+                
+                <div class="overflow-hidden rounded-xl shadow-lg" data-aos="zoom-in" data-aos-delay="400">
+                    <img src="/api/placeholder/600/400" alt="Portfolio Item" class="w-full h-64 object-cover transition-transform duration-500 hover:scale-110">
+                    <div class="p-6 bg-white">
+                        <h3 class="text-xl font-bold mb-2">Blog de Tecnologia</h3>
+                        <p class="text-gray-600 mb-4">Portal de notícias e conteúdo educativo sobre tecnologia.</p>
+                        <a href="#" class="font-medium text-secondary hover:underline">Ver projeto</a>
+                    </div>
+                </div>
+                
+                <div class="overflow-hidden rounded-xl shadow-lg" data-aos="zoom-in" data-aos-delay="500">
+                    <img src="/api/placeholder/600/400" alt="Portfolio Item" class="w-full h-64 object-cover transition-transform duration-500 hover:scale-110">
+                    <div class="p-6 bg-white">
+                        <h3 class="text-xl font-bold mb-2">Landing Page</h3>
+                        <p class="text-gray-600 mb-4">Página de conversão para lançamento de produto digital.</p>
+                        <a href="#" class="font-medium text-secondary hover:underline">Ver projeto</a>
+                    </div>
+                </div>
+                
+                <div class="overflow-hidden rounded-xl shadow-lg" data-aos="zoom-in" data-aos-delay="600">
+                    <img src="/api/placeholder/600/400" alt="Portfolio Item" class="w-full h-64 object-cover transition-transform duration-500 hover:scale-110">
+                    <div class="p-6 bg-white">
+                        <h3 class="text-xl font-bold mb-2">Redesign de Marca</h3>
+                        <p class="text-gray-600 mb-4">Renovação completa de identidade visual e site para empresa estabelecida.</p>
+                        <a href="#" class="font-medium text-secondary hover:underline">Ver projeto</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="btn-primary text-white font-medium px-8 py-3 rounded-full inline-block shadow-lg">Ver Todos os Projetos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6 md:px-12">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold mb-4">O que <span class="text-gradient">Dizem</span> Sobre Nós</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Veja o que nossos clientes têm a dizer sobre nossas soluções e nosso atendimento.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 flex">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"A CodyRise superou todas as nossas expectativas. Nossa loja virtual foi entregue antes do prazo e com um design incrível. As vendas aumentaram significativamente após o lançamento."</p>
+                    <div class="flex items-center">
+                        <img src="/api/placeholder/50/50" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Mariana Santos</h4>
+                            <p class="text-gray-500 text-sm">CEO, Boutique Online</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 flex">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"Trabalhamos com a CodyRise para redesenhar nosso site institucional e ficamos impressionados com a atenção aos detalhes e a criatividade da equipe. O resultado foi excepcional."</p>
+                    <div class="flex items-center">
+                        <img src="/api/placeholder/50/50" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Ricardo Oliveira</h4>
+                            <p class="text-gray-500 text-sm">Diretor de Marketing, Construtora</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 flex">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"A equipe da CodyRise é extremamente profissional e atenciosa. Eles não só desenvolveram nosso site, mas também nos ofereceram orientações valiosas sobre estratégias digitais."</p>
+                    <div class="flex items-center">
+                        <img src="/api/placeholder/50/50" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Amanda Costa</h4>
+                            <p class="text-gray-500 text-sm">Proprietária, Restaurante Gourmet</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contato" class="py-20 bg-gradient text-white">
+        <div class="container mx-auto px-6 md:px-12">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold mb-4">Entre em <span class="text-white">Contato</span></h2>
+                <p class="text-lg opacity-90 max-w-2xl mx-auto">Estamos prontos para transformar sua visão em realidade. Fale conosco e receba uma consulta gratuita.</p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right">
+                    <div class="bg-white text-dark p-8 rounded-xl shadow-lg">
+                        <h3 class="text-2xl font-bold mb-6">Envie uma Mensagem</h3>
+                        <form>
+                            <div class="mb-6">
+                                <label class="block text-gray-700 mb-2 font-medium">Nome Completo</label>
+                                <input type="text" class="w-full px-4 py-3 rounded-lg bg-gray-100 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label class="block text-gray-700 mb-2 font-medium">Email</label>
+                                <input type="email" class="w-full px-4 py-3 rounded-lg bg-gray-100 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label class="block text-gray-700 mb-2 font-medium">Telefone</label>
+                                <input type="tel" class="w-full px-4 py-3 rounded-lg bg-gray-100 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label class="block text-gray-700 mb-2 font-medium">Mensagem</label>
+                                <textarea rows="4" class="w-full px-4 py-3 rounded-lg bg-gray-100 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn-primary text-white font-medium px-8 py-3 rounded-full w-full shadow-lg">Enviar Mensagem</button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2 md:pl-12" data-aos="fade-left">
+                    <h3 class="text-2xl font-bold mb-6">Informações de Contato</h3>
+                    
+                    <div class="mb-8">
+                        <p class="text-lg mb-4 opacity-90">Entre em contato conosco para discutir seu projeto ou tirar dúvidas sobre nossos serviços.</p>
+                        <p class="text-lg mb-6 opacity-90">Nossa equipe está disponível de segunda a sexta, das 9h às 18h.</p>
+                    </div>
+                    
+                    <div class="space-y-6">                       
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-envelope text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">Email</h4>
+                                <p class="opacity-90">mviana.jr@hotmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-phone-alt text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">Telefone</h4>
+                                <p class="opacity-90">(85) 991545551</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-clock text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">Horário de Atendimento</h4>
+                                <p class="opacity-90">Segunda a Sexta, 9h às 18h</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-10">
+                        <h3 class="text-2xl font-bold mb-6">Siga-nos nas Redes Sociais</h3>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-all">
+                                <i class="fab fa-facebook-f text-white text-xl"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-all">
+                                <i class="fab fa-instagram text-white text-xl"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-all">
+                                <i class="fab fa-linkedin-in text-white text-xl"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-all">
+                                <i class="fab fa-github text-white text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20">
+        <div class="container mx-auto px-6 md:px-12">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold mb-4">Perguntas <span class="text-gradient">Frequentes</span></h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Encontre respostas para as dúvidas mais comuns sobre nossos serviços.</p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto">
+                <div class="bg-white shadow-md rounded-xl overflow-hidden mb-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="faq-item">
+                        <div class="faq-question p-6 cursor-pointer flex justify-between items-center font-medium">
+                            <span>Quais tipos de websites vocês desenvolvem?</span>
+                            <i class="fas fa-chevron-down text-secondary transition-transform"></i>
+                        </div>
+                        <div class="faq-answer p-6 pt-0 text-gray-600 hidden">
+                            <p>Desenvolvemos diversos tipos de websites, incluindo sites institucionais, e-commerce, landing pages, blogs, portais de conteúdo, sistemas web personalizados e muito mais. Nossa equipe adapta a solução de acordo com as necessidades específicas do seu negócio.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white shadow-md rounded-xl overflow-hidden mb-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="faq-item">
+                        <div class="faq-question p-6 cursor-pointer flex justify-between items-center font-medium">
+                            <span>Quanto tempo leva para desenvolver um website?</span>
+                            <i class="fas fa-chevron-down text-secondary transition-transform"></i>
+                        </div>
+                        <div class="faq-answer p-6 pt-0 text-gray-600 hidden">
+                            <p>O prazo de desenvolvimento varia de acordo com a complexidade do projeto. Um site institucional simples pode levar de 2 a 4 semanas, enquanto um e-commerce ou sistema web mais complexo pode levar de 6 a 12 semanas. Durante a fase de planejamento, fornecemos um cronograma detalhado para o seu projeto.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white shadow-md rounded-xl overflow-hidden mb-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="faq-item">
+                        <div class="faq-question p-6 cursor-pointer flex justify-between items-center font-medium">
+                            <span>Como funciona o processo de desenvolvimento?</span>
+                            <i class="fas fa-chevron-down text-secondary transition-transform"></i>
+                        </div>
+                        <div class="faq-answer p-6 pt-0 text-gray-600 hidden">
+                            <p>Nosso processo de desenvolvimento segue as seguintes etapas: 1) Briefing e levantamento de requisitos; 2) Planejamento e arquitetura da informação; 3) Design de interface e experiência do usuário; 4) Desenvolvimento e programação; 5) Testes e ajustes; 6) Lançamento e treinamento; 7) Suporte e manutenção contínua.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white shadow-md rounded-xl overflow-hidden mb-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="faq-item">
+                        <div class="faq-question p-6 cursor-pointer flex justify-between items-center font-medium">
+                            <span>Vocês oferecem serviços de manutenção após o lançamento?</span>
+                            <i class="fas fa-chevron-down text-secondary transition-transform"></i>
+                        </div>
+                        <div class="faq-answer p-6 pt-0 text-gray-600 hidden">
+                            <p>Sim, oferecemos planos de manutenção mensal que incluem atualizações de segurança, backups regulares, suporte técnico, pequenas alterações de conteúdo e monitoramento de desempenho. Também oferecemos suporte avulso para ajustes pontuais após o lançamento do site.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white shadow-md rounded-xl overflow-hidden" data-aos="fade-up" data-aos-delay="500">
+                    <div class="faq-item">
+                        <div class="faq-question p-6 cursor-pointer flex justify-between items-center font-medium">
+                            <span>Quais são as formas de pagamento?</span>
+                            <i class="fas fa-chevron-down text-secondary transition-transform"></i>
+                        </div>
+                        <div class="faq-answer p-6 pt-0 text-gray-600 hidden">
+                            <p>Trabalhamos com diversas formas de pagamento, incluindo transferência bancária, PIX, cartão de crédito (parcelamento em até 12x) e boleto bancário. Para projetos maiores, oferecemos planos de pagamento personalizados, geralmente divididos em entrada, marcos do projeto e entrega final.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient text-white text-center">
+        <div class="container mx-auto px-6 md:px-12">
+            <div data-aos="zoom-in">
+                <h2 class="text-4xl font-bold mb-6">Pronto para transformar sua presença digital?</h2>
+                <p class="text-lg opacity-90 max-w-2xl mx-auto mb-10">Vamos trabalhar juntos para criar uma experiência web excepcional que impulsione o crescimento do seu negócio.</p>
+                <a href="#contato" class="bg-white text-green-600 border-2 border-green-600 font-medium px-8 py-3 rounded-full inline-block shadow-lg hover:bg-green-600 hover:text-white transition-colors duration-200">Solicitar Orçamento Gratuito</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-6 md:px-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <a href="#" class="flex items-center space-x-2 mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 200 200">
+                            <path fill="#00b2a9" d="M100 0 L200 50 L200 150 L100 200 L0 150 L0 50 Z"></path>
+                            <path fill="#00a651" d="M100 0 L200 50 L200 150 L100 200 Z" opacity="0.5"></path>
+                            <path fill="white" d="M60 60 L140 60 L140 80 L100 80 L100 140 L60 120 Z"></path>
+                        </svg>
+                        <span class="logo-text text-gradient">CodyRise</span>
+                    </a>
+                    <p class="text-gray-400">Transformando ideias em experiências digitais excepcionais desde 2023.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Links Rápidos</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#inicio" class="text-gray-400 hover:text-white transition-colors">Início</a></li>
+                        <li><a href="#servicos" class="text-gray-400 hover:text-white transition-colors">Serviços</a></li>
+                        <li><a href="#sobre" class="text-gray-400 hover:text-white transition-colors">Sobre</a></li>
+                        <li><a href="#portfolio" class="text-gray-400 hover:text-white transition-colors">Portfólio</a></li>
+                        <li><a href="#contato" class="text-gray-400 hover:text-white transition-colors">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Serviços</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Desenvolvimento Web</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">E-commerce</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">SEO</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Design Responsivo</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Hospedagem</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Contato</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-center"><i class="fas fa-map-marker-alt text-secondary mr-3"></i> <span class="text-gray-400">Av. Paulista, 1000, São Paulo, SP</span></li>
+                        <li class="flex items-center"><i class="fas fa-envelope text-secondary mr-3"></i> <span class="text-gray-400">contato@codyrise.com.br</span></li>
+                        <li class="flex items-center"><i class="fas fa-phone-alt text-secondary mr-3"></i> <span class="text-gray-400">(11) 3456-7890</span></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="mt-12 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">&copy; 2025 CodyRise. Todos os direitos reservados.</p>
+                
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="assets/javascript/main.js"></script>
+</body>
+</html>

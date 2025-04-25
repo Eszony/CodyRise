@@ -1,0 +1,62 @@
+:root {
+    --primary: #00b2a9;
+    --secondary: #00a651;
+    --dark: #333;
+    --light: #f8f9fa;
+}
+
+.bg-gradient {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+}
+
+.text-gradient {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 182, 169, 0.3);
+}
+
+.navbar {
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.service-card {
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Ajustes na seção hero */
+#inicio {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    padding-bottom: 6rem;
+}
+
+/* Melhorando a aparência em dispositivos móveis */
+@media (max-width: 768px) {
+    #inicio {
+        min-height: 80vh;
+        padding-bottom: 4rem;
+    }
+}
+
+.logo-text {
+    font-weight: 700;
+    font-size: 1.8rem;
+}
