@@ -26,10 +26,132 @@
     box-shadow: 0 10px 20px rgba(0, 182, 169, 0.3);
 }
 
-.navbar {
-    backdrop-filter: blur(10px);
-    background-color: rgba(255, 255, 255, 0.8);
+/* Botão secundário com os mesmos efeitos do primário */
+.btn-secondary {
+    background-color: white;
+    color: var(--secondary);
+    border: 2px solid var(--secondary);
+    transition: all 0.3s ease;
 }
+
+.btn-secondary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 182, 169, 0.3);
+    background-color: var(--secondary);
+    color: white;
+}
+
+/* =============== NAVEGAÇÃO - REESCRITA =============== */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    height: 70px;
+}
+
+.logo-container {
+    position: relative;
+    z-index: 1001;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.logo-container img {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+}
+
+.nav-link {
+    font-weight: 500;
+    color: var(--dark);
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--secondary);
+}
+
+/* Menu toggle button */
+.menu-toggle {
+    background: transparent;
+    border: none;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    z-index: 1001;
+    outline: none;
+}
+
+/* Menu mobile */
+.mobile-menu {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    z-index: 999;
+}
+
+.mobile-menu.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.nav-link-mobile {
+    display: block;
+    color: var(--dark);
+    font-weight: 500;
+    padding: 12px 0;
+}
+
+.nav-link-mobile:hover {
+    color: var(--secondary);
+}
+
+/* Regras específicas para diferentes tamanhos de tela */
+@media (min-width: 768px) {
+    /* Esconder elementos mobile em desktop */
+    .md\:hidden,
+    #menu-toggle,
+    .mobile-menu,
+    .mobile-menu.visible {
+        display: none !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+    }
+}
+
+@media (max-width: 767px) {
+    /* Esconder menu desktop em mobile */
+    .hidden.md\:flex {
+        display: none !important;
+    }
+    
+    /* Garantir que o botão do menu esteja visível em mobile */
+    #menu-toggle.menu-toggle.md\:hidden {
+        display: flex !important;
+    }
+}
+
+/* =============== FIM NAVEGAÇÃO =============== */
 
 .service-card {
     transition: all 0.3s ease;
@@ -42,6 +164,7 @@
 
 /* Ajustes na seção hero */
 #inicio {
+    padding-top: 120px; /* Compensar a altura da navbar */
     min-height: 90vh;
     display: flex;
     align-items: center;
@@ -58,5 +181,53 @@
 
 .logo-text {
     font-weight: 700;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
+}
+
+/* Botão flutuante do WhatsApp */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25d366;
+    color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    background-color: #20ba5a;
+    transform: scale(1.1) translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    color: #fff;
+}
+
+/* Animação de pulso para o botão do WhatsApp */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.whatsapp-float {
+    animation: pulse 2s infinite;
+}
+
+.whatsapp-float:hover {
+    animation: none;
 }

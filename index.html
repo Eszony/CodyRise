@@ -10,51 +10,47 @@
     <link rel="stylesheet" href="assets/style/style.css">
 </head>
 <body class="font-sans">
-    <!-- Navbar -->
+    <!-- Navbar - Completamente restruturada -->
     <nav class="navbar fixed top-0 left-0 right-0 z-50 bg-white bg-opacity-80 backdrop-blur py-4">
-      <div class="flex items-center justify-between w-full max-w-screen-xl mx-auto px-6 md:px-12">
-        <!-- Logo -->
-        <a href="#" class="flex-shrink-0">
-          <img
-            src="assets/images/CodyRise.png"
-            alt="CodyRise Logo"
-            class="h-10 w-auto"
-          />
-        </a>
-    
-        <!-- Menu desktop -->
-        <div class="hidden md:flex space-x-8">
-          <a href="#inicio" class="font-medium hover:text-secondary transition-colors">Início</a>
-          <a href="#servicos" class="font-medium hover:text-secondary transition-colors">Serviços</a>
-          <a href="#sobre" class="font-medium hover:text-secondary transition-colors">Sobre</a>
-          <a href="#portfolio" class="font-medium hover:text-secondary transition-colors">Portfólio</a>
-          <a href="#contato" class="font-medium hover:text-secondary transition-colors">Contato</a>
+      <div class="container mx-auto px-6 md:px-12">
+        <div class="flex items-center justify-between">
+          <!-- Logo -->
+          <div class="logo-container">
+            <a href="#">
+              <img src="assets/images/CodyRise.png" alt="CodyRise Logo" class="h-10 w-auto">
+            </a>
+          </div>
+          
+          <!-- Menu Desktop -->
+          <div class="hidden md:flex space-x-8">
+            <a href="#inicio" class="nav-link">Início</a>
+            <a href="#servicos" class="nav-link">Serviços</a>
+            <a href="#sobre" class="nav-link">Sobre</a>
+            <a href="#portfolio" class="nav-link">Portfólio</a>
+            <a href="#contato" class="nav-link">Contato</a>
+          </div>
+          
+          <!-- Botão Mobile - Apenas visível em mobile -->
+          <button id="menu-toggle" class="menu-toggle md:hidden">
+            <i class="fas fa-bars text-2xl"></i>
+          </button>
         </div>
-    
-        <!-- Botão mobile -->
-        <button id="menu-toggle" class="md:hidden focus:outline-none">
-          <i class="fas fa-bars text-2xl"></i>
-        </button>
       </div>
-    
-      <!-- Menu mobile -->
-      <div
-        id="mobile-menu"
-        class="hidden md:hidden absolute top-full left-0 right-0 bg-white shadow-lg p-6 rounded-b-xl"
-      >
-        <div class="flex flex-col space-y-4">
-          <a href="#inicio" class="font-medium hover:text-secondary transition-colors">Início</a>
-          <a href="#servicos" class="font-medium hover:text-secondary transition-colors">Serviços</a>
-          <a href="#sobre" class="font-medium hover:text-secondary transition-colors">Sobre</a>
-          <a href="#portfolio" class="font-medium hover:text-secondary transition-colors">Portfólio</a>
-          <a href="#contato" class="font-medium hover:text-secondary transition-colors">Contato</a>
+      
+      <!-- Menu Mobile -->
+      <div id="mobile-menu" class="mobile-menu">
+        <div class="container mx-auto px-6">
+          <div class="py-4 flex flex-col space-y-4">
+            <a href="#inicio" class="nav-link-mobile">Início</a>
+            <a href="#servicos" class="nav-link-mobile">Serviços</a>
+            <a href="#sobre" class="nav-link-mobile">Sobre</a>
+            <a href="#portfolio" class="nav-link-mobile">Portfólio</a>
+            <a href="#contato" class="nav-link-mobile">Contato</a>
+          </div>
         </div>
       </div>
     </nav>
     
-    
-    
-
     <!-- Hero Section -->
     <section id="inicio" class="relative pt-24 pb-16 bg-gradient overflow-hidden">
         <div class="container mx-auto px-6 md:px-12">
@@ -64,7 +60,7 @@
                     <p class="text-lg mb-8 opacity-90">Criamos websites modernos e responsivos que impulsionam o seu negócio para o próximo nível.</p>
                     <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
                         <a href="#contato" class="btn-primary text-white font-medium px-8 py-3 rounded-full text-center shadow-lg">Fale Conosco</a>
-                        <a href="#servicos" class="bg-white text-green-600 border-2 border-green-600 font-medium px-8 py-3 rounded-full inline-block shadow-lg hover:bg-green-600 hover:text-white transition-colors duration-200">Nossos Serviços</a>
+                        <a href="#servicos" class="btn-secondary font-medium px-8 py-3 rounded-full text-center shadow-lg">Nossos Serviços</a>
                     </div>
                 </div>
                 <div class="md:w-1/2 flex justify-center" data-aos="fade-left">
@@ -207,7 +203,9 @@
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div class="overflow-hidden rounded-xl shadow-lg" data-aos="zoom-in" data-aos-delay="100">
-                    <img src="/api/placeholder/600/400" alt="Portfolio Item" class="w-full h-64 object-cover transition-transform duration-500 hover:scale-110">
+                    <div class="w-full h-64 bg-gradient flex items-center justify-center">
+                        <i class="fas fa-shopping-cart text-white text-5xl"></i>
+                    </div>
                     <div class="p-6 bg-white">
                         <h3 class="text-xl font-bold mb-2">E-commerce de Moda</h3>
                         <p class="text-gray-600 mb-4">Desenvolvimento de loja virtual completa com sistema de pagamento integrado.</p>
@@ -216,7 +214,9 @@
                 </div>
                 
                 <div class="overflow-hidden rounded-xl shadow-lg" data-aos="zoom-in" data-aos-delay="200">
-                    <img src="/api/placeholder/600/400" alt="Portfolio Item" class="w-full h-64 object-cover transition-transform duration-500 hover:scale-110">
+                    <div class="w-full h-64 bg-gradient flex items-center justify-center">
+                        <i class="fas fa-building text-white text-5xl"></i>
+                    </div>
                     <div class="p-6 bg-white">
                         <h3 class="text-xl font-bold mb-2">Site Institucional</h3>
                         <p class="text-gray-600 mb-4">Website responsivo para empresa de serviços financeiros.</p>
@@ -225,7 +225,9 @@
                 </div>
                 
                 <div class="overflow-hidden rounded-xl shadow-lg" data-aos="zoom-in" data-aos-delay="300">
-                    <img src="/api/placeholder/600/400" alt="Portfolio Item" class="w-full h-64 object-cover transition-transform duration-500 hover:scale-110">
+                    <div class="w-full h-64 bg-gradient flex items-center justify-center">
+                        <i class="fas fa-clipboard-list text-white text-5xl"></i>
+                    </div>
                     <div class="p-6 bg-white">
                         <h3 class="text-xl font-bold mb-2">Aplicação Web</h3>
                         <p class="text-gray-600 mb-4">Sistema de gestão de reservas para restaurante gourmet.</p>
@@ -234,7 +236,9 @@
                 </div>
                 
                 <div class="overflow-hidden rounded-xl shadow-lg" data-aos="zoom-in" data-aos-delay="400">
-                    <img src="/api/placeholder/600/400" alt="Portfolio Item" class="w-full h-64 object-cover transition-transform duration-500 hover:scale-110">
+                    <div class="w-full h-64 bg-gradient flex items-center justify-center">
+                        <i class="fas fa-newspaper text-white text-5xl"></i>
+                    </div>
                     <div class="p-6 bg-white">
                         <h3 class="text-xl font-bold mb-2">Blog de Tecnologia</h3>
                         <p class="text-gray-600 mb-4">Portal de notícias e conteúdo educativo sobre tecnologia.</p>
@@ -243,7 +247,9 @@
                 </div>
                 
                 <div class="overflow-hidden rounded-xl shadow-lg" data-aos="zoom-in" data-aos-delay="500">
-                    <img src="/api/placeholder/600/400" alt="Portfolio Item" class="w-full h-64 object-cover transition-transform duration-500 hover:scale-110">
+                    <div class="w-full h-64 bg-gradient flex items-center justify-center">
+                        <i class="fas fa-rocket text-white text-5xl"></i>
+                    </div>
                     <div class="p-6 bg-white">
                         <h3 class="text-xl font-bold mb-2">Landing Page</h3>
                         <p class="text-gray-600 mb-4">Página de conversão para lançamento de produto digital.</p>
@@ -252,7 +258,9 @@
                 </div>
                 
                 <div class="overflow-hidden rounded-xl shadow-lg" data-aos="zoom-in" data-aos-delay="600">
-                    <img src="/api/placeholder/600/400" alt="Portfolio Item" class="w-full h-64 object-cover transition-transform duration-500 hover:scale-110">
+                    <div class="w-full h-64 bg-gradient flex items-center justify-center">
+                        <i class="fas fa-palette text-white text-5xl"></i>
+                    </div>
                     <div class="p-6 bg-white">
                         <h3 class="text-xl font-bold mb-2">Redesign de Marca</h3>
                         <p class="text-gray-600 mb-4">Renovação completa de identidade visual e site para empresa estabelecida.</p>
@@ -288,7 +296,9 @@
                     </div>
                     <p class="text-gray-600 mb-6">"A CodyRise superou todas as nossas expectativas. Nossa loja virtual foi entregue antes do prazo e com um design incrível. As vendas aumentaram significativamente após o lançamento."</p>
                     <div class="flex items-center">
-                        <img src="/api/placeholder/50/50" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                        <div class="w-12 h-12 rounded-full mr-4 bg-gradient flex items-center justify-center">
+                            <i class="fas fa-user text-white"></i>
+                        </div>
                         <div>
                             <h4 class="font-bold">Mariana Santos</h4>
                             <p class="text-gray-500 text-sm">CEO, Boutique Online</p>
@@ -308,7 +318,9 @@
                     </div>
                     <p class="text-gray-600 mb-6">"Trabalhamos com a CodyRise para redesenhar nosso site institucional e ficamos impressionados com a atenção aos detalhes e a criatividade da equipe. O resultado foi excepcional."</p>
                     <div class="flex items-center">
-                        <img src="/api/placeholder/50/50" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                        <div class="w-12 h-12 rounded-full mr-4 bg-gradient flex items-center justify-center">
+                            <i class="fas fa-user text-white"></i>
+                        </div>
                         <div>
                             <h4 class="font-bold">Ricardo Oliveira</h4>
                             <p class="text-gray-500 text-sm">Diretor de Marketing, Construtora</p>
@@ -328,7 +340,9 @@
                     </div>
                     <p class="text-gray-600 mb-6">"A equipe da CodyRise é extremamente profissional e atenciosa. Eles não só desenvolveram nosso site, mas também nos ofereceram orientações valiosas sobre estratégias digitais."</p>
                     <div class="flex items-center">
-                        <img src="/api/placeholder/50/50" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                        <div class="w-12 h-12 rounded-full mr-4 bg-gradient flex items-center justify-center">
+                            <i class="fas fa-user text-white"></i>
+                        </div>
                         <div>
                             <h4 class="font-bold">Amanda Costa</h4>
                             <p class="text-gray-500 text-sm">Proprietária, Restaurante Gourmet</p>
@@ -517,7 +531,7 @@
             <div data-aos="zoom-in">
                 <h2 class="text-4xl font-bold mb-6">Pronto para transformar sua presença digital?</h2>
                 <p class="text-lg opacity-90 max-w-2xl mx-auto mb-10">Vamos trabalhar juntos para criar uma experiência web excepcional que impulsione o crescimento do seu negócio.</p>
-                <a href="#contato" class="bg-white text-green-600 border-2 border-green-600 font-medium px-8 py-3 rounded-full inline-block shadow-lg hover:bg-green-600 hover:text-white transition-colors duration-200">Solicitar Orçamento Gratuito</a>
+                <a href="#contato" class="btn-secondary font-medium px-8 py-3 rounded-full inline-block shadow-lg">Solicitar Orçamento Gratuito</a>
             </div>
         </div>
     </section>
@@ -527,13 +541,8 @@
         <div class="container mx-auto px-6 md:px-12">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div>
-                    <a href="#" class="flex items-center space-x-2 mb-6">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 200 200">
-                            <path fill="#00b2a9" d="M100 0 L200 50 L200 150 L100 200 L0 150 L0 50 Z"></path>
-                            <path fill="#00a651" d="M100 0 L200 50 L200 150 L100 200 Z" opacity="0.5"></path>
-                            <path fill="white" d="M60 60 L140 60 L140 80 L100 80 L100 140 L60 120 Z"></path>
-                        </svg>
-                        <span class="logo-text text-gradient">CodyRise</span>
+                    <a href="#" class="flex items-center mb-6">
+                        <img src="assets/images/CodyRise.png" alt="CodyRise Logo" class="h-10 w-auto mr-2">
                     </a>
                     <p class="text-gray-400">Transformando ideias em experiências digitais excepcionais desde 2023.</p>
                 </div>
@@ -563,9 +572,8 @@
                 <div>
                     <h4 class="text-lg font-bold mb-6">Contato</h4>
                     <ul class="space-y-3">
-                        <li class="flex items-center"><i class="fas fa-map-marker-alt text-secondary mr-3"></i> <span class="text-gray-400">Av. Paulista, 1000, São Paulo, SP</span></li>
-                        <li class="flex items-center"><i class="fas fa-envelope text-secondary mr-3"></i> <span class="text-gray-400">contato@codyrise.com.br</span></li>
-                        <li class="flex items-center"><i class="fas fa-phone-alt text-secondary mr-3"></i> <span class="text-gray-400">(11) 3456-7890</span></li>
+                        <li class="flex items-center"><i class="fas fa-envelope text-secondary mr-3"></i> <span class="text-gray-400">mviana.jr@hotmail.com</span></li>
+                        <li class="flex items-center"><i class="fas fa-phone-alt text-secondary mr-3"></i> <span class="text-gray-400">(85) 991545551</span></li>
                     </ul>
                 </div>
             </div>
@@ -586,5 +594,10 @@
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="assets/javascript/main.js"></script>
+    
+    <!-- Botão flutuante do WhatsApp -->
+    <a href="https://wa.me/5585991545551" target="_blank" rel="noopener noreferrer" class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 </body>
 </html>
