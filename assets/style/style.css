@@ -231,3 +231,7 @@
 .whatsapp-float:hover {
     animation: none;
 }
+
+html, body {
+  overflow-x: hidden;
+}
